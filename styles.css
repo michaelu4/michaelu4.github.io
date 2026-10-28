@@ -405,7 +405,13 @@ figure { margin: 0; }
 
 .project-meta { margin-top: 16px; color: var(--muted); }
 .project-cover { margin-bottom: 24px; }
-.project-story { padding: 40px 0 72px; }
+.project-story { padding: 40px 0 56px; }
+
+.gallery { display: grid; gap: 24px; padding-bottom: 72px; }
+@media (min-width: 720px) { .gallery { grid-template-columns: 1fr 1fr; align-items: start; } }
+.gallery .wide { grid-column: 1 / -1; }
+figcaption { margin-top: 10px; font-size: 0.875rem; color: var(--muted); }
+
 .project-story p { max-width: 64ch; font-size: 1.1875rem; line-height: 1.65; color: var(--ink-2); }
 
 .next-project { padding: 64px 0 24px; border-top: 1px solid var(--line); }

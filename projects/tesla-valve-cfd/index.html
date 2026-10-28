@@ -51,17 +51,27 @@
         <p class="project-meta">Fall 2025</p>
       </section>
 
-      <!-- IMAGE: replace with an <img> of ../../assets/tesla-valve-cfd/cover.jpg (see README) -->
       <figure class="project-cover">
-        <div class="ph ratio-16-9" role="img" aria-label="Placeholder: Tesla valve flow simulation — ANSYS image">
-          <span class="ph-label">Tesla valve flow simulation — ANSYS image</span>
-          <span class="ph-hint">16:9</span>
-        </div>
+        <img class="media" src="../../assets/tesla-valve-cfd/forward-flow.jpg" alt="ANSYS pathlines through a Tesla valve in forward flow, colored by velocity magnitude" width="1343" height="400">
+        <figcaption>Forward flow (right to left). Pathlines colored by velocity magnitude.</figcaption>
       </figure>
 
       <section class="project-story" aria-label="Overview">
         <p>A Tesla valve has no moving parts, yet fluid flows through it more easily one way than the other. I wanted to know what controls that asymmetry. Across more than fifteen ANSYS simulations, I varied flow speed and the number of repeating loops. Each added loop raised the effect by a predictable amount. I then reshaped the valve's internal geometry and improved its one-way behavior by 8.65% at low flow rates, where the effect is usually weakest.</p>
       </section>
+
+      <div class="gallery">
+        <figure class="wide">
+          <img class="media" src="../../assets/tesla-valve-cfd/reverse-flow.jpg" alt="ANSYS pathlines through a Tesla valve in reverse flow, colored by velocity magnitude" width="1030" height="340" loading="lazy">
+          <figcaption>Reverse flow (left to right). Pathlines colored by velocity magnitude.</figcaption>
+        </figure>
+        <figure>
+          <img class="media" src="../../assets/tesla-valve-cfd/diodicity-vs-elements.png" alt="Chart: diodicity rises from about 1.09 to 1.24 as repeating elements increase from 1 to 5" width="1100" height="819" loading="lazy">
+        </figure>
+        <figure>
+          <img class="media" src="../../assets/tesla-valve-cfd/diodicity-vs-reynolds.png" alt="Chart: diodicity versus Reynolds number from 50 to 250" width="576" height="455" loading="lazy">
+        </figure>
+      </div>
 
       <nav class="next-project" aria-label="Next project">
         <span class="next-label">Next project</span>
