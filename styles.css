@@ -346,6 +346,16 @@ li::marker { color: var(--muted); }
 }
 
 .entry h3 { font-size: 1.375rem; }
+/* Organization logos sit on a white tile so dark marks stay visible on navy */
+.entry-logo {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 10px 14px;
+  background: #fff;
+  border-radius: var(--radius);
+}
+.entry-logo img { display: block; height: 28px; width: auto; }
 .entry .role { margin-top: 6px; color: var(--ink-2); }
 .entry .where { margin-top: 4px; color: var(--muted); font-size: 0.9375rem; }
 .entry ul { color: var(--ink-2); max-width: 62ch; }
