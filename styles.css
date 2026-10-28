@@ -287,10 +287,12 @@ li::marker { color: var(--muted); }
 
 /* ---------- Work grid ---------- */
 
-.container-wide { max-width: none; }
+.container-wide { max-width: none; padding: 0 clamp(20px, 5vw, 112px); }
 .work-grid { display: grid; gap: 56px 32px; }
 @media (min-width: 720px) { .work-grid { grid-template-columns: 1fr 1fr; } }
-@media (min-width: 1024px) { .work-grid { gap: 64px 40px; } }
+@media (min-width: 1024px) {
+  .work-grid { --col-gap: clamp(40px, 4vw, 88px); grid-template-columns: repeat(3, 1fr); gap: 72px var(--col-gap); }
+}
 
 .card { display: block; text-decoration: none; color: inherit; }
 .card:hover { color: inherit; }
@@ -318,7 +320,8 @@ li::marker { color: var(--muted); }
 .card-featured h3 { font-size: clamp(1.75rem, 4.5vw, 2.5rem); }
 @media (min-width: 1024px) {
   /* Featured project: cover the same size as the other cards, text beside it */
-  .card-featured { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+  .card-featured { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: var(--col-gap); align-items: center; }
+  .card-featured .card-body { grid-column: 2 / span 2; max-width: 52ch; }
   .card-featured .media { aspect-ratio: 3 / 2; object-fit: cover; }
   .card-featured .card-body { margin-top: 0; }
 }
