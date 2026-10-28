@@ -356,6 +356,8 @@ li::marker { color: var(--muted); }
   border-radius: var(--radius);
 }
 .entry-logo img { display: block; height: 28px; width: auto; }
+.entry-logo-mark { padding: 6px 10px; }
+.entry-logo-mark img { height: 36px; }
 .entry .role { margin-top: 6px; color: var(--ink-2); }
 .entry .where { margin-top: 4px; color: var(--muted); font-size: 0.9375rem; }
 .entry ul { color: var(--ink-2); max-width: 62ch; }
