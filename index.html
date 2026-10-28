@@ -28,7 +28,7 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Public+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Public+Sans:wght@400;500&display=swapdisplay=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -77,73 +77,84 @@
     <section class="section" id="work" aria-labelledby="work-title">
       <div class="container">
         <div class="section-head">
-          <h2 id="work-title">Selected work</h2>
+          <h2 id="work-title">Projects</h2>
         </div>
 
         <div class="work-grid">
           <a class="card card-featured" href="projects/quadruped-robot/">
-            <!-- IMAGE: replace with assets/quadruped-cover.gif (or .jpg) -->
-            <div class="ph ratio-16-9" role="img" aria-label="Placeholder: quadruped robot walking">
+            <!-- IMAGE: replace with an <img> of assets/quadruped-robot/cover.jpg (see README) -->
+            <div class="ph ratio-16-9" role="img" aria-label="Placeholder: Robot walking — GIF">
               <span class="ph-label">Robot walking — GIF</span>
-              <span class="ph-hint">16:9 · cover</span>
+              <span class="ph-hint">16:9</span>
             </div>
             <div class="card-body">
-              <p class="label">Columbia Robotics Studio <span class="tag">In progress</span></p>
-              <h3>Four-legged walking robot</h3>
-              <p>An organic-looking quadruped built under tight limits: eight servos, one single-board computer, a rechargeable battery, and a $100–150 parts budget.</p>
-              <span class="card-more">Read case study</span>
+              <p class="label">Robotics Studio · In progress</p>
+              <h3>Four-Legged Walking Robot</h3>
+              <p>The brief was to build a robot that looks organic and walks.</p>
+              <span class="card-more">Read more</span>
             </div>
           </a>
-
-          <!-- TODO: add a one-line summary for this project -->
+          <a class="card" href="projects/tesla-valve-cfd/">
+            <!-- IMAGE: replace with an <img> of assets/tesla-valve-cfd/cover.jpg (see README) -->
+            <div class="ph ratio-3-2" role="img" aria-label="Placeholder: Tesla valve flow simulation — ANSYS image">
+              <span class="ph-label">Tesla valve flow simulation — ANSYS image</span>
+              <span class="ph-hint">3:2</span>
+            </div>
+            <div class="card-body">
+              <p class="label">Fall 2025</p>
+              <h3>Tesla Valve CFD Study</h3>
+              <p>A Tesla valve has no moving parts, yet fluid flows through it more easily one way than the other.</p>
+              <span class="card-more">Read more</span>
+            </div>
+          </a>
           <a class="card" href="projects/solar-tracker/">
-            <div class="ph ratio-3-2" role="img" aria-label="Placeholder: solar tracker photo">
-              <span class="ph-label">Solar tracker on test stand — photo</span>
+            <!-- IMAGE: replace with an <img> of assets/solar-tracker/cover.jpg (see README) -->
+            <div class="ph ratio-3-2" role="img" aria-label="Placeholder: Solar tracker — photo">
+              <span class="ph-label">Solar tracker — photo</span>
               <span class="ph-hint">3:2</span>
             </div>
             <div class="card-body">
-              <p class="label">Columbia MechE Lab II</p>
-              <h3>Dual-axis solar tracker</h3>
-              <p>Write-up in progress.</p>
+              <p class="label">Spring 2026 · MechE Lab II</p>
+              <h3>Dual-Axis Solar Tracker</h3>
+              <p>Four of us, assigned at random, had one semester to build a tracker that turns a solar panel toward the brightest light.</p>
+              <span class="card-more">Read more</span>
             </div>
           </a>
-
-          <!-- TODO: add a one-line summary for this project -->
           <a class="card" href="projects/aquas/">
-            <div class="ph ratio-3-2" role="img" aria-label="Placeholder: AQUAS vehicle photo">
-              <span class="ph-label">AQUAS vehicle — photo</span>
+            <!-- IMAGE: replace with an <img> of assets/aquas/cover.jpg (see README) -->
+            <div class="ph ratio-3-2" role="img" aria-label="Placeholder: AQUAS boat — photo">
+              <span class="ph-label">AQUAS boat — photo</span>
               <span class="ph-hint">3:2</span>
             </div>
             <div class="card-body">
-              <p class="label">Autonomous vehicle</p>
+              <p class="label">Columbia University Robotics Club · 2024–2025</p>
               <h3>AQUAS</h3>
-              <p>Write-up in progress.</p>
+              <p>AQUAS is an autonomous boat meant to treat algae blooms in local ponds.</p>
+              <span class="card-more">Read more</span>
             </div>
           </a>
-
-          <!-- TODO: add a one-line summary for this project -->
-          <a class="card" href="projects/microfluidics/">
-            <div class="ph ratio-3-2" role="img" aria-label="Placeholder: microfluidic device photo">
-              <span class="ph-label">Microfluidic device / lab setup — photo</span>
+          <a class="card" href="projects/scale-racing-car/">
+            <!-- IMAGE: replace with an <img> of assets/scale-racing-car/cover.jpg (see README) -->
+            <div class="ph ratio-3-2" role="img" aria-label="Placeholder: Cast body and molded wheels — photo">
+              <span class="ph-label">Cast body and molded wheels — photo</span>
               <span class="ph-hint">3:2</span>
             </div>
             <div class="card-body">
-              <p class="label">Research</p>
-              <h3>Microfluidics research</h3>
-              <p>Write-up in progress.</p>
+              <h3>Scale Racing Car</h3>
+              <p>I designed a scale racing car in SolidWorks and then had to make it real, which meant thinking about the mold before the shape.</p>
+              <span class="card-more">Read more</span>
             </div>
           </a>
-
-          <!-- TODO: add a one-line summary for this project -->
-          <a class="card" href="projects/cfd-ansys/">
-            <div class="ph ratio-3-2" role="img" aria-label="Placeholder: CFD contour plot">
-              <span class="ph-label">Ansys contour plot — image</span>
+          <a class="card" href="projects/car-jack/">
+            <!-- IMAGE: replace with an <img> of assets/car-jack/cover.jpg (see README) -->
+            <div class="ph ratio-3-2" role="img" aria-label="Placeholder: Car jack assembly — photo">
+              <span class="ph-label">Car jack assembly — photo</span>
               <span class="ph-hint">3:2</span>
             </div>
             <div class="card-body">
-              <p class="label">Simulation · Ansys</p>
-              <h3>CFD simulation</h3>
-              <p>Write-up in progress.</p>
+              <h3>Mechanical Car Jack</h3>
+              <p>A working car jack built with almost every shop process I've learned: CNC-machined parts, threads cut on a lathe, and 3D-printed and laser-cut components, all of which had to fit and carry load together.</p>
+              <span class="card-more">Read more</span>
             </div>
           </a>
         </div>
@@ -161,16 +172,32 @@
           <article class="entry">
             <div>
               <h3>GE Aerospace</h3>
-              <p class="role">Engineering Intern, Engines Design Engineering</p>
-              <p class="where">Cincinnati, OH</p>
-              <!-- TODO (optional): add internship dates, e.g. <p class="where">Summer 20XX</p> -->
+              <p class="role">Engines Design Engineering</p>
+              <p class="where">Summer 2026 · Cincinnati, OH</p>
             </div>
-            <ul>
-              <li>Built a computer-vision tool on a MobileNetV2 model to screen combustor borescope inspection video. Cut inspection time by ~50%.</li>
-              <li>Won 1st place at GE's first Combustor &amp; Hot-Frames AI Shark Tank.</li>
-              <li>Ran root-cause analysis on GE9X fuel tip defects and supported combustor design work.</li>
-            </ul>
+            <div class="prose">
+              <p>My summer in GE Aerospace's combustor design group centered on the GE9X. My main project was finding out why fuel tips were coming back with defects. The data pointed to the real drivers, and fixing those cut defects by 40% without relaxing a single tolerance. On the side, I noticed how much time engineers spent scrubbing through borescope inspection video. I built a computer-vision tool to do the first pass, which roughly halved inspection time and took first place at the group's AI Shark Tank. Most of what I learned came from being close to the hardware: on-engine inspections, risk calls on nonconforming parts, and cost reviews on the combustor dome.</p>
+            </div>
           </article>
+
+          <article class="entry">
+            <div>
+              <h3>Columbia BioMEMS Laboratory</h3>
+              <p class="role">Research Assistant</p>
+              <p class="where">Prof. Qiao Lin&#x27;s lab</p>
+            </div>
+            <div class="prose">
+              <p>This lab works at a scale where a drop of fluid is a lot. We build chip-sized devices that move and sense tiny volumes for biological testing. A large part of my work is fabrication. One finding I'm proud of is that letting the graphene cure longer in deionized water made it bond noticeably stronger, which I confirmed with peel tests. I also work with biosensors that grab a target molecule at one temperature and let go at another, a way to purify samples without harsh chemicals. I model flexible-channel valves in ANSYS before we build them.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="other-exp">
+          <h3>Other experience</h3>
+          <ul>
+            <li><strong>Columbia Astrophysics Laboratory: Office Assistant.</strong> I manage research reimbursements across federal and university grants.</li>
+            <li><strong>Paul M. Angell Family Foundation: Summer Intern, 2024.</strong> Mapped and analyzed 139 grantee organizations with GIS to guide where the foundation invests.</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -188,69 +215,114 @@
               <h3>Columbia MechE Mentors</h3>
               <p class="role">Co-President</p>
             </div>
-            <ul>
-              <li>Grew the peer mentoring program from 30 to 45 mentor pairs by adding graduate mentors and first-year mentees.</li>
-              <li>Compiled enrollment data and co-wrote the budget proposal. Won a ~20% budget increase after initial pushback from the department committee.</li>
-              <li>Recruited graduate mentors through grad student clubs and the department's graduate representative.</li>
-            </ul>
+            <div class="prose">
+              <p>When I took over, the program only paired upperclassmen with sophomores and juniors. First-years, the students who most need guidance, were left out. I proposed adding them as mentees and bringing in graduate students as mentors. That meant making the case to the department with enrollment data and a budget proposal. The committee pushed back at first, but we came away with about 20% more funding, and the program grew from 30 to 45 pairs.</p>
+            </div>
           </article>
 
           <article class="entry">
             <div>
               <h3>SHPE Columbia</h3>
-              <!-- TODO (optional): add your SHPE title, e.g. <p class="role">Outreach Chair</p> -->
+              <p class="role">Technology Chair</p>
             </div>
-            <ul>
-              <li>Organized Día de Ciencias, the chapter's signature outreach event. High school students come to campus for hands-on STEM workshops.</li>
-              <li>Run the chapter's LinkedIn page.</li>
-            </ul>
+            <div class="prose">
+              <p>I run the chapter's digital side: the website, LinkedIn page, shared drives, and a WhatsApp community that keeps members connected to the board. My favorite event is Día de Ciencias, which brings high school students to campus for hands-on STEM workshops. As a first-generation student, I know how much a day like that can change what someone thinks is possible.</p>
+            </div>
           </article>
 
           <article class="entry">
             <div>
               <h3>ASME Columbia</h3>
-              <!-- TODO: replace "Leadership role" with your actual ASME title -->
-              <p class="role">Leadership role</p>
+              <p class="role">Vice President</p>
             </div>
-            <!-- TODO: add 1–2 bullets on what you did in ASME -->
-            <ul>
-              <li>Details coming soon.</li>
-            </ul>
+            <div class="prose">
+              <p>I'm the link between my class and the department. I plan events from networking nights to elective workshops, and I bring student feedback to monthly meetings with Mechanical Engineering faculty.</p>
+            </div>
+          </article>
+
+          <article class="entry">
+            <div>
+              <h3>SACNAS+ Columbia</h3>
+              <p class="role">Academic Vice President</p>
+              <p class="where">2025–2026</p>
+            </div>
+            <div class="prose">
+              <p>I built the chapter's academic programming, including a graduate school series, research pathway talks, and résumé workshops, and ran its peer mentoring program.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Education & skills -->
+    <section class="section" id="education" aria-labelledby="education-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="education-title">Education</h2>
+        </div>
+
+        <div class="entries">
+          <article class="entry">
+            <div>
+              <h3>Columbia University</h3>
+              <p class="role">Fu Foundation School of Engineering and Applied Science</p>
+            </div>
+            <div class="prose">
+              <p class="degree">B.S. Mechanical Engineering, May 2027</p>
+              <p>Dean's List (Spring 2024, Spring 2025, Spring 2026) · Lowey Family Foundation Scholarship · Hispanic Scholarship Fund Scholar</p>
+            </div>
           </article>
         </div>
 
-        <div class="skills" aria-label="Skills">
+        <h2 class="skills-title" id="skills">Skills</h2>
+        <div class="skills skills-5" aria-labelledby="skills">
+          <div>
+            <h3>CAD</h3>
+            <ul>
+              <li>NX</li>
+              <li>SolidWorks</li>
+              <li>Fusion 360</li>
+            </ul>
+          </div>
           <div>
             <h3>Analysis</h3>
             <ul>
-              <li>CFD (Ansys)</li>
-              <li>Heat transfer</li>
-              <li>Dynamics &amp; vibrations</li>
-              <li>Kinematics of mechanisms</li>
-              <li>Root-cause analysis</li>
+              <li>ANSYS CFD</li>
+              <li>FEA</li>
+              <li>LTspice</li>
             </ul>
           </div>
           <div>
-            <h3>Build</h3>
+            <h3>Fabrication</h3>
             <ul>
-              <li>Legged robotics</li>
-              <li>Servo actuation</li>
-              <li>Mechatronics</li>
+              <li>CNC machining</li>
               <li>3D printing</li>
+              <li>laser cutting</li>
+              <li>soldering</li>
             </ul>
           </div>
           <div>
-            <h3>Software</h3>
+            <h3>Code</h3>
             <ul>
-              <li>Computer vision (MobileNetV2)</li>
+              <li>Python</li>
+              <li>Java</li>
+              <li>Git</li>
               <li>LaTeX</li>
+              <li>GIS</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Languages</h3>
+            <ul>
+              <li>Spanish</li>
+              <li>French</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 5. Contact -->
+    <!-- 6. Contact -->
     <section class="section" id="contact" aria-labelledby="contact-title">
       <div class="container">
         <div class="section-head">
@@ -258,10 +330,9 @@
           <p>Hiring for mechanical or product design roles starting summer 2027? I'd like to hear about it.</p>
         </div>
         <div class="contact-links">
-          <!-- TODO: replace both [ADD EMAIL] placeholders (href and text) -->
-          <a href="mailto:[ADD EMAIL]"><span>[ADD EMAIL]</span></a>
-          <!-- TODO: replace [ADD LINKEDIN URL] -->
-          <a href="[ADD LINKEDIN URL]" rel="noopener"><span>LinkedIn</span></a>
+          <a href="mailto:mau2121@columbia.edu"><span>mau2121@columbia.edu</span></a>
+          <a href="https://www.linkedin.com/in/michael-urgilez" rel="noopener"><span>LinkedIn</span></a>
+          <a href="https://grabcad.com/michael.urgilez-1" rel="noopener"><span>CAD portfolio</span></a>
           <a href="resume.pdf"><span>Résumé</span></a>
         </div>
       </div>

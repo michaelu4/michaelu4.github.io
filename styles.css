@@ -13,9 +13,9 @@
   --accent: #f2994a;   /* 7.6:1 on --bg; used sparingly */
   --on-accent: #0a1930;
 
-  --font-display: "Barlow Semi Condensed", "Arial Narrow", Arial, sans-serif;
-  --font-body: "Public Sans", "Helvetica Neue", Arial, sans-serif;
-  --font-label: "Barlow Semi Condensed", "Arial Narrow", Arial, sans-serif;
+  --font-display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-label: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
 
   --max: 1120px;
   --gutter: 20px;
@@ -209,8 +209,8 @@ li::marker { color: var(--muted); }
 .hero-credit a { color: var(--muted); }
 
 .hero h1 {
-  font-size: clamp(2.75rem, 11vw, 6rem);
-  letter-spacing: -0.01em;
+  font-size: clamp(2.75rem, 11vw, 4.75rem);
+  letter-spacing: -0.03em;
   line-height: 0.98;
 }
 
@@ -349,11 +349,21 @@ li::marker { color: var(--muted); }
 .entry .role { margin-top: 6px; color: var(--ink-2); }
 .entry .where { margin-top: 4px; color: var(--muted); font-size: 0.9375rem; }
 .entry ul { color: var(--ink-2); max-width: 62ch; }
+.prose { max-width: 64ch; color: var(--ink-2); }
+.prose .degree { color: var(--ink); font-weight: 500; margin-bottom: 6px; }
+
+.other-exp { margin-top: 56px; padding-top: 32px; border-top: 1px solid var(--line); }
+.other-exp h3 { font-size: 1.125rem; }
+.other-exp ul { list-style: none; padding: 0; margin-top: 16px; color: var(--ink-2); max-width: 72ch; }
+.other-exp li + li { margin-top: 12px; }
+.other-exp strong { color: var(--ink); font-weight: 500; }
 
 /* ---------- Skills ---------- */
 
-.skills { display: grid; gap: 32px; margin-top: 72px; }
+.skills { display: grid; gap: 32px; margin-top: 32px; }
+.skills-title { margin-top: 88px; font-size: clamp(1.5rem, 4vw, 2rem); }
 @media (min-width: 720px) { .skills { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1024px) { .skills-5 { grid-template-columns: repeat(5, 1fr); } }
 .skills h3 { font-size: 1.125rem; }
 .skills ul { list-style: none; padding: 0; margin-top: 14px; }
 .skills li + li { margin-top: 6px; }
@@ -390,54 +400,13 @@ li::marker { color: var(--muted); }
 .back { font-size: 0.9375rem; text-decoration: none; color: var(--ink-2); }
 .back:hover { color: var(--accent); }
 
-.project-hero h1 { margin-top: 32px; font-size: clamp(2.25rem, 8vw, 4.25rem); letter-spacing: -0.01em; }
-.project-hero .lede { margin-top: 20px; max-width: 46ch; font-size: clamp(1.125rem, 3vw, 1.375rem); line-height: 1.45; color: var(--ink-2); }
-
-.facts {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px 24px;
-  margin: 40px 0 0;
-  padding: 24px 0 0;
-  border-top: 1px solid var(--line);
-}
-@media (min-width: 720px) { .facts { grid-template-columns: repeat(4, 1fr); } }
-.facts dt { font-size: 0.875rem; color: var(--muted); }
-.facts dd { margin: 6px 0 0; font-size: 0.9375rem; }
-
-.project-cover { margin-bottom: 24px; }
-
-.p-section { display: grid; gap: 20px; padding: 64px 0; border-top: 1px solid var(--line); }
-@media (min-width: 1024px) {
-  .p-section { grid-template-columns: 1fr 2.2fr; gap: 64px; padding: 88px 0; }
-  .p-section > h2 { position: sticky; top: 92px; align-self: start; }
-}
-.p-section > h2 { font-size: clamp(1.625rem, 4.5vw, 2.25rem); }
-.p-section .body { max-width: 64ch; color: var(--ink-2); }
-.p-section .body p { color: var(--ink-2); }
-.p-section .body h3 { font-size: 1.1875rem; color: var(--ink); margin: 32px 0 8px; }
-.p-section .body h3:first-child { margin-top: 0; }
-
-.spec { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
-.spec li { display: grid; gap: 4px; padding: 16px 0; margin: 0; border-bottom: 1px solid var(--line); }
-@media (min-width: 720px) { .spec li { grid-template-columns: 180px 1fr; gap: 24px; } }
-.spec .k { font-size: 0.9375rem; color: var(--muted); }
-.spec .v { color: var(--ink); }
-
-.gallery { display: grid; gap: 16px; margin-top: 28px; }
-@media (min-width: 720px) { .gallery { grid-template-columns: 1fr 1fr; } }
-.gallery .wide { grid-column: 1 / -1; }
-
+.project-hero h1 { margin-top: 32px; font-size: clamp(2.25rem, 8vw, 4.25rem); letter-spacing: -0.025em; }
 figure { margin: 0; }
-figcaption { margin-top: 10px; font-size: 0.875rem; color: var(--muted); }
 
-.pending {
-  padding: 20px;
-  border: 1px dashed var(--line-strong);
-  border-radius: var(--radius);
-  color: var(--muted);
-  font-size: 0.9375rem;
-}
+.project-meta { margin-top: 16px; color: var(--muted); }
+.project-cover { margin-bottom: 24px; }
+.project-story { padding: 40px 0 72px; }
+.project-story p { max-width: 64ch; font-size: 1.1875rem; line-height: 1.65; color: var(--ink-2); }
 
 .next-project { padding: 64px 0 24px; border-top: 1px solid var(--line); }
 .next-project a { text-decoration: none; font-family: var(--font-display); font-size: clamp(1.5rem, 5vw, 2.25rem); letter-spacing: -0.02em; }

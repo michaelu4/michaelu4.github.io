@@ -3,28 +3,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Four-legged walking robot — Michael Urgilez</title>
-  <meta name="description" content="An organic-looking quadruped built under tight constraints: eight serial-bus servos, a single-board computer, a rechargeable battery, and a $100–150 parts budget. Columbia Robotics Studio.">
+  <title>Four-Legged Walking Robot — Michael Urgilez</title>
+  <meta name="description" content="The brief was to build a robot that looks organic and walks.">
   <link rel="canonical" href="https://michaelu4.github.io/projects/quadruped-robot/">
   <meta name="theme-color" content="#0a1930">
 
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Michael Urgilez">
-  <meta property="og:title" content="Four-legged walking robot — Michael Urgilez">
-  <meta property="og:description" content="An organic-looking quadruped built on eight servos and a $100–150 parts budget. Columbia Robotics Studio.">
+  <meta property="og:title" content="Four-Legged Walking Robot — Michael Urgilez">
+  <meta property="og:description" content="The brief was to build a robot that looks organic and walks.">
   <meta property="og:url" content="https://michaelu4.github.io/projects/quadruped-robot/">
   <meta property="og:image" content="https://michaelu4.github.io/assets/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Four-legged walking robot — Michael Urgilez">
-  <meta name="twitter:description" content="An organic-looking quadruped built on eight servos and a $100–150 parts budget. Columbia Robotics Studio.">
+  <meta name="twitter:title" content="Four-Legged Walking Robot — Michael Urgilez">
+  <meta name="twitter:description" content="The brief was to build a robot that looks organic and walks.">
   <meta name="twitter:image" content="https://michaelu4.github.io/assets/og-image.png">
 
   <link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Public+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700FONTLINKdisplay=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../styles.css">
 </head>
 <body>
@@ -34,9 +34,9 @@
     <div class="container">
       <a class="wordmark" href="../../">Michael Urgilez</a>
       <nav class="nav" aria-label="Primary">
+        <a class="nav-extra" href="../../#about">About</a>
         <a href="../../#work">Work</a>
         <a class="nav-extra" href="../../#experience">Experience</a>
-        <a class="nav-extra" href="../../#about">About</a>
         <a href="../../#contact">Contact</a>
       </nav>
     </div>
@@ -46,117 +46,26 @@
     <div class="container">
 
       <section class="project-hero" aria-labelledby="project-title">
-        <a class="back" href="../../#work">← All work</a>
-        <h1 id="project-title">Four-legged walking robot</h1>
-        <p class="lede">An organic-looking quadruped, built to walk on eight servos and a $100–150 parts budget.</p>
-        <dl class="facts">
-          <div><dt>Context</dt><dd>Columbia Robotics Studio</dd></div>
-          <div><dt>Status</dt><dd>In progress</dd></div>
-          <div><dt>Focus</dt><dd>Legged robotics, servo actuation</dd></div>
-          <div><dt>Fabrication</dt><dd>3D-printed shell and textures</dd></div>
-          <!-- TODO (optional): add Timeline / Team / My role facts here -->
-        </dl>
+        <a class="back" href="../../#work">← All projects</a>
+        <h1 id="project-title">Four-Legged Walking Robot</h1>
+        <p class="project-meta">Robotics Studio · In progress</p>
       </section>
 
-      <!-- IMAGE: replace with assets/quadruped/walking.gif -->
+      <!-- IMAGE: replace with an <img> of ../../assets/quadruped-robot/cover.jpg (see README) -->
       <figure class="project-cover">
-        <div class="ph ratio-16-9" role="img" aria-label="Placeholder: robot walking">
+        <div class="ph ratio-16-9" role="img" aria-label="Placeholder: Robot walking — GIF">
           <span class="ph-label">Robot walking — GIF</span>
-          <span class="ph-hint">16:9 · hero</span>
+          <span class="ph-hint">16:9</span>
         </div>
       </figure>
 
-      <section class="p-section" aria-labelledby="problem">
-        <h2 id="problem">Problem</h2>
-        <div class="body">
-          <p>Build a four-legged robot that walks and looks organic rather than mechanical, inside a fixed hardware and cost envelope.</p>
-          <!-- TODO: 2–3 sentences on the brief. What did "organic" mean for this robot? What was the walking goal (terrain, speed, gait)? -->
-        </div>
-      </section>
-
-      <section class="p-section" aria-labelledby="constraints">
-        <h2 id="constraints">Constraints</h2>
-        <div class="body">
-          <ul class="spec">
-            <li><span class="k">Actuators</span><span class="v">Max 8 serial-bus servos, 240° range</span></li>
-            <li><span class="k">Controller</span><span class="v">Single-board computer</span></li>
-            <li><span class="k">Power</span><span class="v">Rechargeable battery</span></li>
-            <li><span class="k">Budget</span><span class="v">~$100–150 in parts</span></li>
-            <li><span class="k">Body</span><span class="v">3D-printed shell and textures</span></li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="p-section" aria-labelledby="decisions">
-        <h2 id="decisions">Design decisions</h2>
-        <div class="body">
-          <!-- TODO: for each decision, state the choice, the alternative you rejected, and why.
-               Suggested topics: servo allocation per leg, leg geometry/linkage, gait,
-               shell form and textures, electronics and battery placement. -->
-          <h3>Actuation</h3>
-          <p>Serial-bus servos with 240° of travel, capped at eight for the whole robot.</p>
-          <h3>Control</h3>
-          <p>A single-board computer runs the robot.</p>
-          <h3>Form</h3>
-          <p>A 3D-printed shell with printed surface textures gives the robot its organic look.</p>
-          <figure style="margin-top:32px">
-            <!-- IMAGE: replace with assets/quadruped/cad.png -->
-            <div class="ph ratio-16-9" role="img" aria-label="Placeholder: CAD render of the robot">
-              <span class="ph-label">CAD render, full assembly — image</span>
-              <span class="ph-hint">16:9</span>
-            </div>
-            <figcaption>Full assembly in CAD.</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section class="p-section" aria-labelledby="build">
-        <h2 id="build">Build</h2>
-        <div class="body">
-          <!-- TODO: describe fabrication and assembly: print settings/materials, wiring, what broke and how you fixed it. -->
-          <p>Build log in progress.</p>
-          <div class="gallery">
-            <!-- IMAGES: replace each with a photo in assets/quadruped/ -->
-            <figure>
-              <div class="ph ratio-1-1" role="img" aria-label="Placeholder: printed parts">
-                <span class="ph-label">3D-printed parts laid out — photo</span>
-                <span class="ph-hint">1:1</span>
-              </div>
-            </figure>
-            <figure>
-              <div class="ph ratio-1-1" role="img" aria-label="Placeholder: shell texture close-up">
-                <span class="ph-label">Shell texture close-up — photo</span>
-                <span class="ph-hint">1:1</span>
-              </div>
-            </figure>
-            <figure class="wide">
-              <div class="ph ratio-16-9" role="img" aria-label="Placeholder: electronics and wiring">
-                <span class="ph-label">Servos, controller &amp; battery wiring — photo</span>
-                <span class="ph-hint">16:9</span>
-              </div>
-            </figure>
-          </div>
-        </div>
-      </section>
-
-      <section class="p-section" aria-labelledby="results">
-        <h2 id="results">Results</h2>
-        <div class="body">
-          <!-- TODO: results once testing is done: does it walk, how far/fast, final cost vs. budget, what you'd change. -->
-          <p class="pending">Results will be posted when testing is complete.</p>
-          <figure style="margin-top:28px">
-            <!-- IMAGE: replace with assets/quadruped/final.jpg -->
-            <div class="ph ratio-16-9" role="img" aria-label="Placeholder: finished robot">
-              <span class="ph-label">Finished robot — photo or video</span>
-              <span class="ph-hint">16:9</span>
-            </div>
-          </figure>
-        </div>
+      <section class="project-story" aria-label="Overview">
+        <p>The brief was to build a robot that looks organic and walks. The challenge is doing that on a budget: eight servos at most, a single-board computer, a battery, and around $100–150 in parts. Every leg design is a trade between how natural the motion looks and how few motors it can use. The shell and textures are 3D printed, and I'm working on a sensor pod that rises from the body and retracts flush.</p>
       </section>
 
       <nav class="next-project" aria-label="Next project">
         <span class="next-label">Next project</span>
-        <a href="../solar-tracker/">Dual-axis solar tracker →</a>
+        <a href="../tesla-valve-cfd/">Tesla Valve CFD Study →</a>
       </nav>
     </div>
   </main>
