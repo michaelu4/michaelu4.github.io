@@ -31,3 +31,11 @@ Keep photos under ~300 KB (export JPG/WebP at ~1600px wide). For the walking GIF
 ```html
 <video class="media ratio-16-9" src="../../assets/quadruped/walking.mp4" autoplay muted loop playsinline></video>
 ```
+
+## After changing styles.css or main.js
+
+Bump the `?v=` value on the `styles.css` / `main.js` links in every HTML file (e.g. `?v=20261028b` → `?v=20261029a`) so visitors' browsers fetch the new file instead of a cached one:
+
+```bash
+sed -i 's/?v=20261028b/?v=NEWVALUE/g' index.html projects/*/index.html
+```
