@@ -51,6 +51,9 @@
 
     <!-- 1. Bio (opens the page) -->
     <section class="hero" id="top" aria-labelledby="hero-title">
+      <!-- Background photo: save a landscape photo of Columbia (≥2000px wide, ~400 KB JPG) as assets/columbia.jpg.
+           Until that file exists, the intro shows the plain navy backdrop. -->
+      <div class="hero-bg" aria-hidden="true"><div class="hero-bg-img"></div></div>
       <div class="container hero-grid">
         <div>
           <h1 id="hero-title">Michael Urgilez</h1>
@@ -72,6 +75,8 @@
           <span class="ph-hint">4:5</span>
         </div>
       </div>
+      <!-- TODO: credit the photographer if the license requires it, e.g. "Photo: Jane Doe, CC BY-SA 4.0" -->
+      <p class="hero-credit">Photo: [ADD PHOTO CREDIT]</p>
     </section>
 
     <!-- 2. Selected work -->
@@ -276,5 +281,6 @@
       <a href="#top">Back to top</a>
     </div>
   </footer>
+  <script src="main.js" defer></script>
 </body>
 </html>
