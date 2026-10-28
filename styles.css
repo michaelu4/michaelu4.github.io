@@ -1,0 +1,402 @@
+/* Michael Urgilez — portfolio
+   One stylesheet for every page. Mobile-first; breakpoints at 720px and 1024px. */
+
+:root {
+  --bg: #ffffff;
+  --bg-soft: #f5f4f0;
+  --ink: #141414;
+  --ink-2: #444444;   /* 9.7:1 on white */
+  --muted: #666666;   /* 5.7:1 on white */
+  --line: #e4e2dc;
+  --accent: #c2410c;  /* 5.2:1 on white; used sparingly */
+
+  --font-display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+
+  --max: 1120px;
+  --gutter: 20px;
+  --radius: 6px;
+  --section: 88px;
+}
+
+@media (min-width: 720px) {
+  :root { --gutter: 40px; --section: 128px; }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+
+a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
+a:hover { color: var(--accent); }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+p { margin: 0 0 1em; }
+p:last-child { margin-bottom: 0; }
+
+ul { margin: 0; padding-left: 1.1em; }
+li + li { margin-top: 0.5em; }
+li::marker { color: var(--muted); }
+
+.container {
+  width: 100%;
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--gutter);
+  top: -100px;
+  background: var(--ink);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: var(--radius);
+  z-index: 100;
+}
+.skip-link:focus { top: 12px; color: #fff; }
+
+/* Small uppercase labels */
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.92);
+  -webkit-backdrop-filter: saturate(1.4) blur(10px);
+  backdrop-filter: saturate(1.4) blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+}
+
+.nav { display: flex; gap: 24px; }
+.nav a {
+  font-size: 0.9375rem;
+  text-decoration: none;
+  color: var(--ink-2);
+}
+.nav a:hover { color: var(--accent); }
+.nav .nav-extra { display: none; }
+@media (min-width: 720px) { .nav .nav-extra { display: inline; } }
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: var(--radius);
+  border: 1px solid var(--ink);
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.15s, color 0.15s, border-color 0.15s;
+}
+.btn-primary { background: var(--ink); color: #fff; }
+.btn-primary:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn-secondary { background: transparent; color: var(--ink); }
+.btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ---------- Hero ---------- */
+
+.hero { padding: 72px 0 var(--section); }
+@media (min-width: 720px) { .hero { padding-top: 136px; } }
+
+.hero h1 {
+  font-size: clamp(2.75rem, 11vw, 6rem);
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+}
+
+.hero .positioning {
+  margin-top: 24px;
+  max-width: 34ch;
+  font-size: clamp(1.25rem, 3.6vw, 1.625rem);
+  line-height: 1.35;
+  color: var(--ink-2);
+}
+
+.hero .meta { margin-top: 28px; color: var(--muted); font-size: 0.9375rem; }
+
+.status {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: 36px;
+  font-size: 1rem;
+}
+.status::before {
+  content: "";
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  transform: translateY(-1px);
+}
+
+.hero .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+
+/* ---------- Sections ---------- */
+
+.section { padding: var(--section) 0; border-top: 1px solid var(--line); }
+
+.section-head { margin-bottom: 48px; }
+.section-head h2 { font-size: clamp(2rem, 6vw, 3rem); margin-top: 12px; }
+.section-head p { margin-top: 16px; color: var(--ink-2); max-width: 52ch; }
+
+/* ---------- Image placeholders ----------
+   Replace a .ph element with an <img> when the real photo is ready.
+   See README.md for the exact markup. */
+
+.ph {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  aspect-ratio: 4 / 3;
+  padding: 20px;
+  background-color: var(--bg-soft);
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent 0 14px,
+    rgba(20, 20, 20, 0.035) 14px 15px
+  );
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  text-align: center;
+  color: var(--ink-2);
+}
+.ph-label { font-family: var(--font-mono); font-size: 0.8125rem; letter-spacing: 0.02em; }
+.ph-hint { font-family: var(--font-mono); font-size: 0.6875rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+
+.ratio-16-9 { aspect-ratio: 16 / 9; }
+.ratio-3-2 { aspect-ratio: 3 / 2; }
+.ratio-1-1 { aspect-ratio: 1 / 1; }
+.ratio-4-5 { aspect-ratio: 4 / 5; }
+
+.media { border-radius: var(--radius); width: 100%; object-fit: cover; background: var(--bg-soft); }
+
+/* ---------- Work grid ---------- */
+
+.work-grid { display: grid; gap: 56px 32px; }
+@media (min-width: 720px) { .work-grid { grid-template-columns: 1fr 1fr; } }
+
+.card { display: block; text-decoration: none; color: inherit; }
+.card:hover { color: inherit; }
+.card .ph, .card .media { transition: transform 0.3s ease, border-color 0.2s; }
+.card:hover .ph, .card:hover .media { border-color: #cfccc4; }
+@media (prefers-reduced-motion: no-preference) {
+  .card:hover .ph, .card:hover .media { transform: translateY(-3px); }
+}
+
+.card-body { margin-top: 20px; }
+.card h3 { font-size: 1.375rem; margin-top: 8px; }
+.card:hover h3 { color: var(--accent); }
+.card p { margin-top: 8px; color: var(--ink-2); max-width: 52ch; }
+
+.card-more {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.card-featured { grid-column: 1 / -1; }
+.card-featured h3 { font-size: clamp(1.75rem, 4.5vw, 2.5rem); }
+@media (min-width: 1024px) {
+  .card-featured { display: grid; grid-template-columns: 1.6fr 1fr; gap: 48px; align-items: end; }
+  .card-featured .card-body { margin-top: 0; padding-bottom: 8px; }
+}
+
+.tag {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  vertical-align: 1px;
+}
+
+/* ---------- Experience / Leadership entries ---------- */
+
+.entries { display: grid; gap: 0; }
+
+.entry {
+  display: grid;
+  gap: 12px;
+  padding: 32px 0;
+  border-top: 1px solid var(--line);
+}
+.entry:first-child { border-top: 0; padding-top: 0; }
+@media (min-width: 720px) {
+  .entry { grid-template-columns: 1fr 2fr; gap: 40px; }
+}
+
+.entry h3 { font-size: 1.375rem; }
+.entry .role { margin-top: 6px; color: var(--ink-2); }
+.entry .where { margin-top: 4px; color: var(--muted); font-size: 0.9375rem; }
+.entry ul { color: var(--ink-2); max-width: 62ch; }
+
+/* ---------- Skills ---------- */
+
+.skills { display: grid; gap: 32px; margin-top: 72px; }
+@media (min-width: 720px) { .skills { grid-template-columns: repeat(3, 1fr); } }
+.skills h3 { font-family: var(--font-mono); font-weight: 500; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.skills ul { list-style: none; padding: 0; margin-top: 14px; }
+.skills li + li { margin-top: 6px; }
+
+/* ---------- About ---------- */
+
+.about { display: grid; gap: 40px; }
+@media (min-width: 720px) { .about { grid-template-columns: 1fr 1.4fr; gap: 64px; align-items: start; } }
+.about p { font-size: 1.1875rem; line-height: 1.55; color: var(--ink-2); max-width: 46ch; }
+.about p:first-child { color: var(--ink); }
+
+/* ---------- Contact ---------- */
+
+.contact-links { display: grid; gap: 0; margin-top: 8px; }
+.contact-links a {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 4.5vw, 2rem);
+  letter-spacing: -0.015em;
+  overflow-wrap: anywhere;
+}
+.contact-links a:first-child { border-top: 1px solid var(--line); }
+.contact-links .label { flex: none; }
+
+/* ---------- Footer ---------- */
+
+.site-footer { padding: 40px 0 56px; color: var(--muted); font-size: 0.875rem; }
+.site-footer .container { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+.site-footer a { color: var(--muted); }
+
+/* ---------- Project pages ---------- */
+
+.project-hero { padding: 48px 0 40px; }
+@media (min-width: 720px) { .project-hero { padding-top: 88px; } }
+
+.back { font-size: 0.9375rem; text-decoration: none; color: var(--ink-2); }
+.back:hover { color: var(--accent); }
+
+.project-hero h1 { margin-top: 32px; font-size: clamp(2.25rem, 8vw, 4.25rem); letter-spacing: -0.03em; }
+.project-hero .lede { margin-top: 20px; max-width: 46ch; font-size: clamp(1.125rem, 3vw, 1.375rem); line-height: 1.45; color: var(--ink-2); }
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 24px;
+  margin: 40px 0 0;
+  padding: 24px 0 0;
+  border-top: 1px solid var(--line);
+}
+@media (min-width: 720px) { .facts { grid-template-columns: repeat(4, 1fr); } }
+.facts dt { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.facts dd { margin: 6px 0 0; font-size: 0.9375rem; }
+
+.project-cover { margin-bottom: 24px; }
+
+.p-section { display: grid; gap: 20px; padding: 64px 0; border-top: 1px solid var(--line); }
+@media (min-width: 1024px) {
+  .p-section { grid-template-columns: 1fr 2.2fr; gap: 64px; padding: 88px 0; }
+  .p-section > h2 { position: sticky; top: 92px; align-self: start; }
+}
+.p-section > h2 { font-size: clamp(1.625rem, 4.5vw, 2.25rem); }
+.p-section .body { max-width: 64ch; color: var(--ink-2); }
+.p-section .body p { color: var(--ink-2); }
+.p-section .body h3 { font-size: 1.1875rem; color: var(--ink); margin: 32px 0 8px; }
+.p-section .body h3:first-child { margin-top: 0; }
+
+.spec { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+.spec li { display: grid; gap: 4px; padding: 16px 0; margin: 0; border-bottom: 1px solid var(--line); }
+@media (min-width: 720px) { .spec li { grid-template-columns: 180px 1fr; gap: 24px; } }
+.spec .k { font-family: var(--font-mono); font-size: 0.8125rem; color: var(--muted); }
+.spec .v { color: var(--ink); }
+
+.gallery { display: grid; gap: 16px; margin-top: 28px; }
+@media (min-width: 720px) { .gallery { grid-template-columns: 1fr 1fr; } }
+.gallery .wide { grid-column: 1 / -1; }
+
+figure { margin: 0; }
+figcaption { margin-top: 10px; font-size: 0.875rem; color: var(--muted); }
+
+.pending {
+  padding: 20px;
+  border: 1px dashed #cfccc4;
+  border-radius: var(--radius);
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.next-project { padding: 64px 0 24px; border-top: 1px solid var(--line); }
+.next-project a { text-decoration: none; font-family: var(--font-display); font-size: clamp(1.5rem, 5vw, 2.25rem); letter-spacing: -0.02em; }
+.next-project .label { display: block; margin-bottom: 10px; }
