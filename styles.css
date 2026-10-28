@@ -2,13 +2,16 @@
    One stylesheet for every page. Mobile-first; breakpoints at 720px and 1024px. */
 
 :root {
-  --bg: #ffffff;
-  --bg-soft: #f5f4f0;
-  --ink: #141414;
-  --ink-2: #444444;   /* 9.7:1 on white */
-  --muted: #666666;   /* 5.7:1 on white */
-  --line: #e4e2dc;
-  --accent: #c2410c;  /* 5.2:1 on white; used sparingly */
+  color-scheme: dark;
+  --bg: #0a1930;       /* deep navy backdrop */
+  --bg-soft: #102544;
+  --ink: #f3f5f9;      /* 16:1 on --bg */
+  --ink-2: #c4cedd;    /* 11:1 on --bg */
+  --muted: #93a3bb;    /* 6.9:1 on --bg */
+  --line: #1e3557;
+  --line-strong: #34507a;
+  --accent: #f2994a;   /* 7.6:1 on --bg; used sparingly */
+  --on-accent: #0a1930;
 
   --font-display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
   --font-body: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
@@ -44,6 +47,8 @@ img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; text-underline-offset: 0.2em; text-decoration-thickness: 1px; }
 a:hover { color: var(--accent); }
 
+[id] { scroll-margin-top: 76px; }
+
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
@@ -77,12 +82,12 @@ li::marker { color: var(--muted); }
   left: var(--gutter);
   top: -100px;
   background: var(--ink);
-  color: #fff;
+  color: var(--bg);
   padding: 8px 14px;
   border-radius: var(--radius);
   z-index: 100;
 }
-.skip-link:focus { top: 12px; color: #fff; }
+.skip-link:focus { top: 12px; color: var(--bg); }
 
 /* Small uppercase labels */
 .label {
@@ -99,7 +104,7 @@ li::marker { color: var(--muted); }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(10, 25, 48, 0.88);
   -webkit-backdrop-filter: saturate(1.4) blur(10px);
   backdrop-filter: saturate(1.4) blur(10px);
   border-bottom: 1px solid var(--line);
@@ -145,12 +150,12 @@ li::marker { color: var(--muted); }
   text-decoration: none;
   transition: background-color 0.15s, color 0.15s, border-color 0.15s;
 }
-.btn-primary { background: var(--ink); color: #fff; }
-.btn-primary:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn-primary { background: var(--ink); color: var(--bg); }
+.btn-primary:hover { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
 .btn-secondary { background: transparent; color: var(--ink); }
 .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
 
-/* ---------- Hero ---------- */
+/* ---------- Hero + bio ---------- */
 
 .hero { padding: 72px 0 var(--section); }
 @media (min-width: 720px) { .hero { padding-top: 136px; } }
@@ -215,7 +220,7 @@ li::marker { color: var(--muted); }
   background-image: repeating-linear-gradient(
     -45deg,
     transparent 0 14px,
-    rgba(20, 20, 20, 0.035) 14px 15px
+    rgba(255, 255, 255, 0.035) 14px 15px
   );
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -240,7 +245,7 @@ li::marker { color: var(--muted); }
 .card { display: block; text-decoration: none; color: inherit; }
 .card:hover { color: inherit; }
 .card .ph, .card .media { transition: transform 0.3s ease, border-color 0.2s; }
-.card:hover .ph, .card:hover .media { border-color: #cfccc4; }
+.card:hover .ph, .card:hover .media { border-color: var(--line-strong); }
 @media (prefers-reduced-motion: no-preference) {
   .card:hover .ph, .card:hover .media { transform: translateY(-3px); }
 }
@@ -307,13 +312,6 @@ li::marker { color: var(--muted); }
 .skills h3 { font-family: var(--font-mono); font-weight: 500; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 .skills ul { list-style: none; padding: 0; margin-top: 14px; }
 .skills li + li { margin-top: 6px; }
-
-/* ---------- About ---------- */
-
-.about { display: grid; gap: 40px; }
-@media (min-width: 720px) { .about { grid-template-columns: 1fr 1.4fr; gap: 64px; align-items: start; } }
-.about p { font-size: 1.1875rem; line-height: 1.55; color: var(--ink-2); max-width: 46ch; }
-.about p:first-child { color: var(--ink); }
 
 /* ---------- Contact ---------- */
 
@@ -391,7 +389,7 @@ figcaption { margin-top: 10px; font-size: 0.875rem; color: var(--muted); }
 
 .pending {
   padding: 20px;
-  border: 1px dashed #cfccc4;
+  border: 1px dashed var(--line-strong);
   border-radius: var(--radius);
   color: var(--muted);
   font-size: 0.9375rem;
@@ -400,3 +398,13 @@ figcaption { margin-top: 10px; font-size: 0.875rem; color: var(--muted); }
 .next-project { padding: 64px 0 24px; border-top: 1px solid var(--line); }
 .next-project a { text-decoration: none; font-family: var(--font-display); font-size: clamp(1.5rem, 5vw, 2.25rem); letter-spacing: -0.02em; }
 .next-project .label { display: block; margin-bottom: 10px; }
+
+/* Bio sits inside the hero, so the page opens on it */
+.hero-grid { display: grid; gap: 48px; }
+@media (min-width: 1024px) {
+  .hero-grid { grid-template-columns: 1.5fr 1fr; gap: 72px; align-items: end; }
+}
+.bio { margin-top: 32px; max-width: 54ch; }
+.bio p { font-size: 1.125rem; line-height: 1.6; color: var(--ink-2); }
+.bio p:first-child { color: var(--ink); }
+.hero-portrait { max-width: 420px; }

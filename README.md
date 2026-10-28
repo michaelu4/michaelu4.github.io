@@ -3,7 +3,7 @@
 Personal portfolio for Michael Urgilez. Plain HTML/CSS, no build step. GitHub Pages serves it from `main`.
 
 ```
-index.html                  Home: hero, work, experience, leadership, skills, about, contact
+index.html                  Home: bio, work, experience, leadership, skills, contact
 styles.css                  Shared styles
 projects/<slug>/index.html  Project pages (quadruped-robot is the full case study)
 assets/                     Images, favicon, og-image.png (link preview)
