@@ -287,6 +287,7 @@ li::marker { color: var(--muted); }
 
 /* ---------- Work grid ---------- */
 
+.container-wide { max-width: none; }
 .work-grid { display: grid; gap: 56px 32px; }
 @media (min-width: 720px) { .work-grid { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 1024px) { .work-grid { grid-template-columns: repeat(3, 1fr); gap: 48px 28px; } }
@@ -314,6 +315,7 @@ li::marker { color: var(--muted); }
 }
 
 .card-featured { grid-column: 1 / -1; }
+@media (min-width: 1024px) { .card-featured .media { aspect-ratio: 2 / 1; object-fit: cover; object-position: 50% 55%; } }
 .card-featured h3 { font-size: clamp(1.75rem, 4.5vw, 2.5rem); }
 @media (min-width: 1024px) {
   /* Featured project: full-width cover, text underneath in two columns */
@@ -427,7 +429,7 @@ figure { margin: 0; }
 @media (min-width: 720px) { .gallery { grid-template-columns: 1fr 1fr; align-items: start; } }
 .gallery .wide { grid-column: 1 / -1; }
 @media (min-width: 1024px) { .gallery-3 { grid-template-columns: repeat(3, 1fr); } }
-.gallery-3 > figure:not(.wide) > .media { aspect-ratio: 3 / 4; object-fit: cover; }
+.gallery-3:not(.gallery-fit) > figure:not(.wide) > .media { aspect-ratio: 3 / 4; object-fit: cover; }
 video.media { display: block; height: auto; }
 figcaption { margin-top: 10px; font-size: 0.875rem; color: var(--muted); }
 
