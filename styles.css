@@ -411,6 +411,7 @@ figure { margin: 0; }
 @media (min-width: 720px) { .gallery { grid-template-columns: 1fr 1fr; align-items: start; } }
 .gallery .wide { grid-column: 1 / -1; }
 @media (min-width: 1024px) { .gallery-3 { grid-template-columns: repeat(3, 1fr); } }
+.gallery-3 > figure:not(.wide) > .media { aspect-ratio: 3 / 4; object-fit: cover; }
 video.media { display: block; height: auto; }
 figcaption { margin-top: 10px; font-size: 0.875rem; color: var(--muted); }
 
