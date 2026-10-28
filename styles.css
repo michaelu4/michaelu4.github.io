@@ -370,6 +370,34 @@ li::marker { color: var(--muted); }
 .other-exp li + li { margin-top: 12px; }
 .other-exp strong { color: var(--ink); font-weight: 500; }
 
+/* Experience & leadership as cards: logo cover on top, text below */
+.entries-grid { gap: 24px; }
+@media (min-width: 720px) { .entries-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .entries-grid { grid-template-columns: repeat(3, 1fr); } }
+.entries-grid .entry {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.entries-grid .entry:first-child { padding: 0; border-top: 1px solid var(--line); }
+.entries-grid .entry > div:first-child { padding: 0 20px; }
+.entries-grid .entry-logo {
+  display: flex;
+  justify-content: center;
+  width: calc(100% + 40px);
+  height: 140px;
+  margin: 0 -20px 20px;
+  padding: 0;
+  border-radius: 0;
+}
+.entries-grid .entry-logo img { height: 52px; max-width: 80%; object-fit: contain; }
+.entries-grid .entry-logo-mark img { height: 84px; }
+.entries-grid .prose { padding: 14px 20px 24px; font-size: 0.9375rem; }
+
 /* ---------- Skills ---------- */
 
 .skills { display: grid; gap: 32px; margin-top: 32px; }
