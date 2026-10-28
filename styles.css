@@ -410,6 +410,8 @@ figure { margin: 0; }
 .gallery { display: grid; gap: 24px; padding-bottom: 72px; }
 @media (min-width: 720px) { .gallery { grid-template-columns: 1fr 1fr; align-items: start; } }
 .gallery .wide { grid-column: 1 / -1; }
+@media (min-width: 1024px) { .gallery-3 { grid-template-columns: repeat(3, 1fr); } }
+video.media { display: block; height: auto; }
 figcaption { margin-top: 10px; font-size: 0.875rem; color: var(--muted); }
 
 .project-story p { max-width: 64ch; font-size: 1.1875rem; line-height: 1.65; color: var(--ink-2); }
