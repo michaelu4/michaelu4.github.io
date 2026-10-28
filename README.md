@@ -10,7 +10,7 @@ assets/                     Images, favicon, og-image.png (link preview)
 resume.pdf                  Add this file at the repo root
 ```
 
-## Find everything left to fill in (the intro background photo goes at `assets/columbia.jpg`)
+## Find everything left to fill in
 
 ```bash
 grep -rn -e "TODO" -e "\[ADD" -e "IMAGE" --include=*.html .
