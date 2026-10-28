@@ -89,13 +89,9 @@ li::marker { color: var(--muted); }
 }
 .skip-link:focus { top: 12px; color: var(--bg); }
 
-/* Small uppercase labels */
+/* Small context line (e.g. course or lab on a project card) */
 .label {
-  font-family: var(--font-label);
-  font-weight: 500;
-  font-size: 0.875rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 0.9375rem;
   color: var(--muted);
 }
 
@@ -201,7 +197,7 @@ li::marker { color: var(--muted); }
 .section { padding: var(--section) 0; border-top: 1px solid var(--line); }
 
 .section-head { margin-bottom: 48px; }
-.section-head h2 { font-size: clamp(2rem, 6vw, 3rem); margin-top: 12px; }
+.section-head h2 { font-size: clamp(2rem, 6vw, 3rem); }
 .section-head p { margin-top: 16px; color: var(--ink-2); max-width: 52ch; }
 
 /* ---------- Image placeholders ----------
@@ -229,7 +225,7 @@ li::marker { color: var(--muted); }
   color: var(--ink-2);
 }
 .ph-label { font-family: var(--font-label); font-weight: 500; font-size: 1rem; letter-spacing: 0.02em; }
-.ph-hint { font-family: var(--font-label); font-size: 0.8125rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; }
+.ph-hint { font-size: 0.8125rem; color: var(--muted); }
 
 .ratio-16-9 { aspect-ratio: 16 / 9; }
 .ratio-3-2 { aspect-ratio: 3 / 2; }
@@ -279,10 +275,7 @@ li::marker { color: var(--muted); }
   border: 1px solid currentColor;
   border-radius: 999px;
   color: var(--accent);
-  font-family: var(--font-label);
-  font-size: 0.6875rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font-size: 0.8125rem;
   vertical-align: 1px;
 }
 
@@ -310,7 +303,7 @@ li::marker { color: var(--muted); }
 
 .skills { display: grid; gap: 32px; margin-top: 72px; }
 @media (min-width: 720px) { .skills { grid-template-columns: repeat(3, 1fr); } }
-.skills h3 { font-family: var(--font-label); font-weight: 500; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.skills h3 { font-size: 1.125rem; }
 .skills ul { list-style: none; padding: 0; margin-top: 14px; }
 .skills li + li { margin-top: 6px; }
 
@@ -331,7 +324,6 @@ li::marker { color: var(--muted); }
   overflow-wrap: anywhere;
 }
 .contact-links a:first-child { border-top: 1px solid var(--line); }
-.contact-links .label { flex: none; }
 
 /* ---------- Footer ---------- */
 
@@ -359,7 +351,7 @@ li::marker { color: var(--muted); }
   border-top: 1px solid var(--line);
 }
 @media (min-width: 720px) { .facts { grid-template-columns: repeat(4, 1fr); } }
-.facts dt { font-family: var(--font-label); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.facts dt { font-size: 0.875rem; color: var(--muted); }
 .facts dd { margin: 6px 0 0; font-size: 0.9375rem; }
 
 .project-cover { margin-bottom: 24px; }
@@ -378,7 +370,7 @@ li::marker { color: var(--muted); }
 .spec { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
 .spec li { display: grid; gap: 4px; padding: 16px 0; margin: 0; border-bottom: 1px solid var(--line); }
 @media (min-width: 720px) { .spec li { grid-template-columns: 180px 1fr; gap: 24px; } }
-.spec .k { font-family: var(--font-label); font-size: 0.8125rem; color: var(--muted); }
+.spec .k { font-size: 0.9375rem; color: var(--muted); }
 .spec .v { color: var(--ink); }
 
 .gallery { display: grid; gap: 16px; margin-top: 28px; }
@@ -398,7 +390,7 @@ figcaption { margin-top: 10px; font-size: 0.875rem; color: var(--muted); }
 
 .next-project { padding: 64px 0 24px; border-top: 1px solid var(--line); }
 .next-project a { text-decoration: none; font-family: var(--font-display); font-size: clamp(1.5rem, 5vw, 2.25rem); letter-spacing: -0.02em; }
-.next-project .label { display: block; margin-bottom: 10px; }
+.next-label { display: block; margin-bottom: 10px; color: var(--muted); font-size: 0.9375rem; }
 
 /* Bio sits inside the hero, so the page opens on it */
 .hero-grid { display: grid; gap: 48px; }
